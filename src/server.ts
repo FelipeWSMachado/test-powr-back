@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-import { testConnection } from "./database/connection";
+import { testConnection } from "./Database/connection";
 import routes from "./routes";
 
 testConnection();
