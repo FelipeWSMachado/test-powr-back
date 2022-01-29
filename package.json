@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn --unhandled-rejections=none src/server.ts",
+    "build": "tsc",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback"
   },
