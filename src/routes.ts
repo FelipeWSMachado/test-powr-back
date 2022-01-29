@@ -2,7 +2,7 @@ const express = require("express");
 import RegisterJson from "./Controllers/registerJSON";
 const routes = express.Router();
 routes.use(express.json());
-routes.get("/", (req, res) => {
+routes.get("/", (req: any, res: any) => {
   res.send("Hello");
 });
 
