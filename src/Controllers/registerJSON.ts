@@ -6,8 +6,9 @@ class RegisterJson {
     const { json } = req.body;
     if (!json) return res.status(404).send("No JSON");
     try {
-      items.registerItem(json);
-      return res.sendStatus(201);
+      const itemID = await items.registerItem(json);
+      console.log(itemID);
+      return res.status(201).send(itemID);
     } catch (error) {
       res.send(error).status(500);
     }
